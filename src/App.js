@@ -26,6 +26,10 @@ function App() {
     addTasks(t)
     
   }
+  const handleDelete=(id)=>{
+    var newTasks=tasks.filter(t=>t.id!=id)
+    addTasks(newTasks)
+  }
   return (
     
     <div className="App">
@@ -33,7 +37,7 @@ function App() {
       
       {
         value==0?
-          <Tasks alltasks={tasks} handleCompleted={handleCompleted}/>
+          <Tasks alltasks={tasks} handleCompleted={handleCompleted} handleDelete={handleDelete}/>
         :
           <Create handleTasks={handleTasks}/>
       }

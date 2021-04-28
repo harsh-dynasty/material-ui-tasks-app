@@ -10,7 +10,7 @@ const useStyles = makeStyles({
       height:'70vh'
     },
   });
-export default function Tasks({alltasks,handleCompleted}){
+export default function Tasks({alltasks,handleCompleted,handleDelete}){
     const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -21,8 +21,9 @@ export default function Tasks({alltasks,handleCompleted}){
         
     return(
         <div className={classes.root}>
-            {alltasks.map(task=><EachTask ex={expanded} handleChange={handleChange} task={task} handleCompleted={handleCompleted}/>)}
-            
+          {alltasks.length==0?<p>No tasks added</p>
+            :alltasks.map(task=><EachTask ex={expanded} handleChange={handleChange} task={task} handleCompleted={handleCompleted} handleDelete={handleDelete}/>)
+          }  
         </div>
     )
     

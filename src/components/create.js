@@ -7,7 +7,8 @@ import { useState } from 'react';
 const useStyles = makeStyles({
     title: {
         width:"70%",
-        margin:20
+        margin:20,
+        
     },
     body:{
         margin:20,
@@ -32,6 +33,7 @@ export default function Create({handleTasks}){
                 variant="outlined"
                 className={classes.body}
                 onChange={(e)=>setBody(e.target.value)}
+                
                 />
                 <br/>
               <Button

@@ -11,7 +11,8 @@ const useStyles = makeStyles({
   root: {
     width: "100%",
     position:'absolute',
-    bottom:0
+    bottom:0,
+   
   },
 });
 
@@ -28,7 +29,7 @@ export default function SimpleBottomNavigation(props) {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction label="Tasks" icon={<List/>} />
+      <BottomNavigationAction label="Tasks" icon={<List />} />
       {/* <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} /> */}
       <BottomNavigationAction label="Create" icon={<Create />} />
     </BottomNavigation>
